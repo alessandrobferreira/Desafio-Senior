@@ -37,7 +37,7 @@ ng serve
 
 Abra seu navegador e acesse http://localhost:7000 (porta do Angular).
 
-BANCO DE DADOS MySQL
+🎲 BANCO DE DADOS MySQL
 
 a - Abra o Workbench e faça login no seu servidor MySQL.
 
