@@ -1,27 +1,55 @@
-# DesafioSenior
+# Desafio-Senior
+Teste técnico em Angular/Node.js sobre *Aplicação de fluxo de aprovação para compra de material de escritório*.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+💻 Tecnologias
 
-## Development server
+    NodeJs    
+    MySQL
+    Angular 17
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+⌨️ Editor / IDE
 
-## Code scaffolding
+    Visual Studio Code
+    Angular Extensions link
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Algumas funcionalidades disponíveis na API
 
-## Build
+    ✅ Solicitar um produto e registrar descrição e preço.    
+    ✅ Aprovar ou reprovar uma solicitação.
+    ✅ Ao reprovar poder preencher um campo de observações.
+    ✅ Consultar um produto.
+    ✅ Filtrar um status de produto.
+    ✅ Filtrar por nome do produto.
+    ✅ Inserir um novo produto e colocar imagem através do campo URL.
+    ✅ Banco de dados MySQL para consultas.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Você precisa ter Node.js / NPM instalado localmente.
+Também será necessário ter o WorkBench/MySQL
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    Instale todas as dependências necessárias:
 
-## Running end-to-end tests
+npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    Execute o projeto:
 
-## Further help
+ng serve
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Abra seu navegador e acesse http://localhost:7000 (porta do Angular).
+
+BANCO DE DADOS MySQL
+
+a - Abra o Workbench e faça login no seu servidor MySQL.
+
+"user": "root",
+"password": "123456",
+
+b - Clique no menu "Server" e selecione a opção "Data Import".
+
+c - Na tela de importação de dados, selecione a opção "Import from Self-Contained File" e selecione o arquivo do dump .sql que está na pasta raiz do projeto  que você deseja importar.
+
+d - Em seguida, selecione a opção "Default Target Schema" ou escolha um banco de dados específico para importar o dump.
+
+e - Clique em "Start Import" em "Import Progress" para iniciar o processo de importação.
+
+f - Feito os procedimentos anteriores, (tendo a certeza que em seu sistema 	operacional o serviço do MySQL esteja rodando por padrão na porta 3306 e tendo a certeza que a aplicação também esteja rodando) basta iniciar os testes de requisições utilizando o postman.
