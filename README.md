@@ -42,7 +42,7 @@ BANCO DE DADOS MySQL
 a - Abra o Workbench e faça login no seu servidor MySQL.
 
 "user": "root",
-"password": "123456",
+"password": "123456".
 
 b - Clique no menu "Server" e selecione a opção "Data Import".
 
