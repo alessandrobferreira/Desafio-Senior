@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+body {
+  background: url(//subtlepatterns.com/patterns/scribble_light.png);
+  font-family: Calluna, Arial, sans-serif;
+  min-height: 1000px;
+}
+
+.price {
+  font-weight: 900;
+  color: #007380;
+}
+
+.c-f {
+  position: absolute;
+  top: 30px;
+  float: right;
+  right: 30px;
+  color: #02282c;
+  /* left: 50%;
+    transform: translate(-50%); */
+  width: 280px !important;
+  /* margin-left: -370px; */
+  border-radius: 8px !important;
+  height: 56px !important;
+}
+
+.c-f ::placeholder {
+  /* Estilos para o placeholder aqui */
+  color: #02282c !important; /* Cor do texto do placeholder */
+}
+
+.new-btn {
+  position: relative;
+  top: 52px;
+  left: -15px !important;
+  color: #02282c;
+}
+
+.icon-close {
+  position: absolute;
+  top: 52px;
+  left: 200px !important;
+  color: #02282c;
+  z-index: 99;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.4;
+  }
+}
+
+#wrap {
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+.columns_2 figure {
+  width: 49%;
+  margin-right: 1%;
+}
+.columns_2 figure:nth-child(2) {
+  margin-right: 0;
+}
+.columns_3 figure {
+  width: 32%;
+  margin-right: 1%;
+}
+.columns_3 figure:nth-child(3) {
+  margin-right: 0;
+}
+.columns_4 figure {
+  width: 24%;
+  margin-right: 1%;
+}
+.columns_4 figure:nth-child(4) {
+  margin-right: 0;
+}
+.columns_5 figure {
+  width: 19%;
+  margin-right: 1%;
+}
+.columns_5 figure:nth-child(5) {
+  margin-right: 0;
+}
+#columns figure:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+#columns:hover figure:not(:hover) {
+  opacity: 0.4;
+}
+div#columns figure {
+  display: inline-block;
+  background: #fefefe;
+  border: 2px solid #fafafa;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 0px 15px;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  /* column-break-inside: avoid; */
+  padding: 15px;
+  padding-bottom: 5px;
+  background: -webkit-linear-gradient(45deg, #fff, #f9f9f9);
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+div#columns figure img {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+  font-size: 0.9rem;
+  color: #044b53;
+  line-height: 1.5;
+  height: 60px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+}
+
+a.button {
+  padding: 10px;
+  background: #226f77;
+  margin: 10px;
+  display: block;
+  text-align: center;
+  color: #fff;
+  transition: all 1s linear;
+  text-decoration: none;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  border-bottom: 3px solid #e6f4ef;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+a.button:hover {
+  background: #449da7;
+  border-bottom: 3px solid #007380;
+  color: #f1f2f3;
+}
+@media screen and (max-width: 960px) {
+  #columns figure {
+    width: 24%;
+  }
+}
+@media screen and (max-width: 767px) {
+  #columns figure {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #columns figure {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 500px) {
+  #columns figure {
+    width: 100%;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}

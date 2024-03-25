@@ -1,0 +1,49 @@
+ 
+<div id="wrap">
+
+
+        <div class="input-group no-border c-f ">
+            <input type="text" [(ngModel)]="fieldBusca" (input)="buscar()" class="form-control c-f" placeholder="Buscar...">
+            <div mat-raised-button  class="btn-white btn-round btn-just-icon bt-po new-btn">
+                <i class="material-icons">search</i>
+                <div class="ripple-container"></div>
+            </div>
+            <div (click)="clearBusca()" class="btn-clear-inp"><i class="material-icons icon-close">close</i></div>
+        </div>
+
+
+	<div *ngIf="!handleFind" id="columns" class="columns_4 fadeIn first">
+    	
+
+            <figure *ngFor="let produto of produtos.produto; let i = index">
+                <div *ngIf="produto.viewAlmoxarife === 1">
+                    <img [src]="produto.url">
+                    <figcaption>{{produto.nome}}</figcaption>
+                    <p>{{produto.descricao}}</p>
+                    <p style="color: red;" *ngIf="produto.situacao === 'Reprovado'">Reprovado</p>
+                    <p style="color: green;" *ngIf="produto.situacao === 'Aprovado'">Aprovado</p>
+                    <span class="price">{{ produto.precoProduto | currency:'BRL':'symbol':'1.2-2' }}</span>
+                </div>
+
+            </figure>
+
+        
+  
+    </div>
+
+	<div *ngIf="handleFind" id="columns" class="columns_4 fadeIn first">
+    	
+            <figure *ngFor="let produto of produtos; let i = index">
+                <img [src]="produto.url">
+                <figcaption>{{produto.nome}}</figcaption>
+                <p>{{produto.descricao}}</p>
+                <p style="color: red;" *ngIf="produto.situacao === 'Reprovado'">Reprovado</p>
+                <p style="color: green;" *ngIf="produto.situacao === 'Aprovado'">Aprovado</p>
+                <span class="price">{{ produto.precoProduto | currency:'BRL':'symbol':'1.2-2' }}</span>
+            </figure>
+
+        
+  
+    </div>
+
+</div>

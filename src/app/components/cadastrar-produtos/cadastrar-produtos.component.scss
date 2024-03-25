@@ -1,0 +1,541 @@
+img {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+  font-size: 0.9rem;
+  color: #044b53;
+  line-height: 1.5;
+  height: 60px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+}
+
+.st-prop {
+  font-weight: 600;
+  color: #044b53;
+}
+
+.lb-v {
+  position: absolute;
+  top: 24px;
+  left: -10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #809a9c;
+}
+
+.img-loc {
+  width: 300px;
+  margin-top: -60px !important;
+  margin: auto;
+}
+
+.price {
+  font-weight: 900;
+  color: #007380;
+}
+
+.content-cad {
+  margin: auto;
+  width: 80%;
+}
+
+.new-bg {
+  background-color: #0e8895 !important;
+  height: 80px;
+  /* background-color: green !important; */
+  /* background-image: linear-gradient(to left, rgba(255, 0, 0, 0), #e4cff5da) !important; */
+}
+
+.btn-tit-e {
+  background-color: #a5c8a6 !important;
+  color: #0d0d0d !important;
+}
+
+.color-ic {
+  color: #ffffff !important;
+}
+
+.color-ic-r {
+  color: red !important;
+}
+
+.p-ad-circ {
+  position: relative;
+  top: 8px !important;
+  left: 4px;
+  color: #1c6623;
+}
+
+.p-ad-circ-mr {
+  position: relative;
+  top: 8px !important;
+  left: 4px;
+  color: #a7a8a7;
+}
+
+.position-add {
+  top: 46px;
+  color: #fff;
+  float: right;
+  right: -16px;
+  font-size: 13px;
+  border: none;
+  min-width: 50px;
+  border-radius: 2px;
+  border: solid 1px #fff;
+  outline: none !important;
+  margin-left: 10px;
+  /* background-color: #118794; */
+  &:hover {
+    border: solid 1px #cecece;
+    /* background-color: #1d8b97; */
+  }
+}
+
+.position-cancel {
+  top: 101px;
+  color: #fff;
+  float: right;
+  right: 112px;
+  font-size: 13px;
+  border: none;
+  min-width: 50px;
+  border-radius: 2px;
+  border: solid 1px #fff;
+  outline: none !important;
+  margin-left: 10px;
+  /* background-color: #118794; */
+  &:hover {
+    border: solid 1px #cecece;
+    /* background-color: #1d8b97; */
+  }
+}
+
+.navbar-form {
+  width: 420px;
+  float: right;
+  margin-top: -112px;
+
+  .form-control {
+    color: #ffffff;
+    background-color: #435d7d !important;
+    /* background-color: #566e8c !important; */
+    border: none;
+  }
+}
+
+.color-line:hover {
+  background-image: linear-gradient(
+    to left,
+    rgb(250, 247, 247),
+    #c7dfecb3
+  ) !important;
+}
+
+.c-f {
+  position: absolute;
+  float: right;
+  right: 30px;
+  /* left: 50%;
+    transform: translate(-50%); */
+  width: 280px !important;
+  /* margin-left: -370px; */
+  border-radius: 8px !important;
+  height: 56px !important;
+}
+/* .c-f {
+    width: 280px !important;
+    margin-left: -370px;
+    border-radius: 6px !important;
+  } */
+
+.new-btn {
+  position: relative;
+  top: -56px;
+  left: 20px !important;
+}
+
+.bt-po {
+  margin-top: 20px !important;
+  color: #ffffff;
+}
+
+.position-add:active {
+  border: solid 1px #cecece;
+  background-color: #1d8b97;
+}
+
+@media screen and (max-width: 390px) {
+  .position-add {
+    /* display: none; */
+    width: 120px;
+    right: -20px;
+  }
+
+  .position-cancel {
+    width: 128px;
+    top: 119px;
+    right: 100px;
+  }
+}
+
+@media screen and (max-width: 318px) {
+  .position-add {
+    /* display: none; */
+    width: 120px;
+    right: -20px;
+  }
+
+  .position-cancel {
+    display: none;
+    /* width: 128px;
+      top: 119px;
+      right: 100px; */
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .c-f {
+    left: 50%;
+    transform: translate(-50%);
+    width: 220px !important;
+    /* margin-left: 30px; */
+    border-radius: 6px !important;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .c-f {
+    display: none;
+  }
+}
+
+/* Adicione este estilo ao seu arquivo de folha de estilo global ou ao componente específico */
+.eye-icon {
+  border: none; /* Remove a borda */
+  background-color: transparent; /* Remove a cor de fundo */
+  color: #516d8f; /* Define a cor do ícone */
+  font-size: 18px; /* Define o tamanho do ícone */
+}
+
+.card-title {
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.title-name {
+  font-weight: 600;
+  color: #435d7d;
+  margin-top: 20px;
+}
+
+.card-category {
+  color: #e7e5e5 !important;
+}
+
+.t-table {
+  font-weight: 800;
+}
+
+.card-header-person {
+  background-color: #f58634;
+}
+
+.th-table {
+  background-color: rgb(241, 241, 241) !important;
+  border: solid 1px #cfcfcf !important;
+  color: #566e8c !important;
+}
+
+.th-b {
+  border: solid 1px #cfcfcf !important;
+}
+
+.prr-pos {
+  position: relative;
+  top: -20px;
+}
+
+.card-icon {
+  /* display: none; */
+  position: relative;
+  top: 16px;
+  box-sizing: 50% !important;
+  width: 40px;
+  height: 40px;
+  &:hover {
+    cursor: pointer;
+    color: rgb(167, 170, 170);
+    /* opacity: .65; */
+  }
+}
+
+.cor {
+  position: relative;
+  top: -11px;
+  left: -11px;
+}
+
+/* ------------------------------------------- */
+
+.main-content {
+  margin-top: 90px;
+  /* background-color: yellow; */
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+/* BASIC */
+
+html {
+  background-color: #56baed !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: #56baed !important;
+}
+
+a {
+  color: #92badd;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 40px 8px 10px 8px;
+  color: #cccccc;
+}
+
+/* STRUCTURE */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+  /* background-color: #aaccca !important; */
+  border-bottom: solid 6px #eb7f28;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#formFooter {
+  background-color: #f6f6f6;
+  border-top: 1px solid #dce8f1;
+  padding: 25px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+/* TABS */
+
+h2.inactive {
+  color: #cccccc;
+}
+
+h2.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid #5fbae9;
+}
+
+/* ANIMATIONS */
+
+/* Simple CSS3 Fade-in-down Animation */
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fadeIn.first {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after {
+  width: 100%;
+}
+
+/* OTHERS */
+
+*:focus {
+  outline: none;
+}
+
+#icon {
+  width: 60%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ck-l {
+  margin: 16px;
+  padding: 10px;
+  opacity: 0.55;
+}
+
+.sp-c {
+  /* margin: auto; */
+  position: absolute;
+  top: 260px;
+  left: 53%;
+  transform: translate(-50%);
+}
+
+.space-one {
+  padding-right: 10px;
+  border-right: 3px solid rgb(227, 229, 233);
+  /* background-color: #56baed; */
+}
+
+.space-two {
+  padding-left: 10px;
+}
+
+.form-check-input {
+  position: absolute;
+  top: 260px;
+  left: 50%;
+  transform: translate(-240%);
+}
+
+.new-conf-card {
+  max-height: 290px;
+}

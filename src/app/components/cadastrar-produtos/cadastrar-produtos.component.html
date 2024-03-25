@@ -1,0 +1,65 @@
+<div class="main-content fadeInDown">
+    <div class="container-fluid">
+
+        <div class="row justify-content-center align-items-center">
+
+            <div class="img-loc">
+                <figure>
+                    <img *ngIf="showImage" [src]="urlImg">
+
+                    <figcaption class="st-prop">{{ nameProduto || '' }}</figcaption>
+                    <p> {{descProduto || ''}} </p>
+                    <p class="price" *ngIf="valueProduto.length>1">  R$ {{ valueProduto || '' }} </p>
+                    </figure>
+            </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header new-bg">
+                        <h4 class="card-title">CADASTRO DE PRODUTOS</h4>
+                    </div>
+                    <div class="card-body">
+
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input [(ngModel)]="nameProduto" id="image" name="image" class="form-control" placeholder="Nome do Produto" type="text" autocomplete="on" (input)="ngChangeImage()">
+                                </div>
+
+                                
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input [(ngModel)]="descProduto" id="descProduto" name="descProduto" class="form-control" placeholder="Descrição do Produto" type="text" autocomplete="on">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input [(ngModel)]="urlImg" id="image" name="image" class="form-control" placeholder="URL da Imagem" type="text" autocomplete="on" (input)="ngChangeImage()">
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="lb-v">R$</label>
+                                    <input [(ngModel)]="valueProduto" id="image" name="image" class="form-control" placeholder="Valor" type="text" autocomplete="on" (input)="fieldFormat()" mask="separator.2" thousandSeparator="." decimalSeparator="," prefix="R$ " >
+                                </div>
+                            </div>
+
+
+                            <a (click)="cancel()" class="btn btn-danger position-cancel" data-toggle="modal">
+                                <i class="material-icons"></i> <span>LIMPAR</span>
+                            </a>
+                            <div class="clearfix"></div>
+                            <a (click)="save()" class="btn btn-success position-add" data-toggle="modal">
+                                <i class="material-icons">&#xE147;</i> <span>SALVAR</span>
+                            </a>
+                            <div class="clearfix"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

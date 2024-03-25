@@ -1,0 +1,92 @@
+<div class="main-content fadeInDown">
+    <div class="container-fluid">
+
+        
+
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-8">
+                
+                <div class="card">
+                    <div class="card-header new-bg">
+                        <h4 class="card-title">APROVAR PRODUTOS</h4>
+                    </div>
+                    <div *ngIf="statusVerificado && statusVerificado.length == 0">
+                        <h3 class="text-center">Não há produtos para ser verificado!</h3>
+                    </div>
+                    <div *ngIf="produtos.produto && produtos.produto.length > 0">
+                        <div *ngFor="let produto of produtos.produto; let i = index" >
+                            <div class="card-body" *ngIf="!produto.viewAlmoxarife" >
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="row justify-content-center align-items-center">
+                                        <div class="img-loc">
+                                            <figure>
+                                                <img *ngIf="showImage" [src]="produto.url">
+                                                <figcaption class="st-prop">{{ produto.nome || '' }}</figcaption>
+                                                <p> {{produto.descricao || ''}} </p>
+                                                <p class="price" *ngIf="valueProduto.length>1">  R$ {{ produto.precoProduto || '' }} </p>
+                                                </figure>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                        
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input [(ngModel)]="produto.nome" id="image" name="image" class="form-control" placeholder="Nome do Produto" type="text" readonly>
+                                        </div>
+                        
+                                    </div>
+                        
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input [(ngModel)]="produto.descricao" id="descProduto" name="descProduto" class="form-control" placeholder="Descrição do Produto" type="text" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <input [(ngModel)]="produto.url" id="image" name="image" class="form-control" placeholder="URL da Imagem" type="text" readonly>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="lb-v">R$</label>
+                                            <input [(ngModel)]="produto.precoProduto" id="image" name="image" class="form-control" placeholder="Valor" type="text" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="st-pr fadeIn second col-md-4">
+                                            <label>Situação:</label>
+                                            <mat-select class="new-mat-select" placeholder="Selecione o estado"  (selectionChange)="onChangeState(produto)">
+                                                <mat-option *ngFor="let opcao of opcoes" [value]="opcao.option">{{ opcao.option }}</mat-option>
+                                            </mat-select>
+                                        </div>
+                                        <div class="st-pr col-md-4">
+                                            <label>Observação:</label>
+                                            <mat-form-field appearance="fill">
+                                                <textarea matInput placeholder="Observação" [(ngModel)]="observacao"></textarea>
+                                            </mat-form-field>
+                                        </div>
+                        
+                        
+                                    </div>
+                                    <a (click)="cancel()" class="btn btn-danger position-cancel" data-toggle="modal">
+                                        <i class="material-icons"></i> <span>CANCELAR</span>
+                                    </a>
+                                    <div class="clearfix"></div>
+                                    <a (click)="save(produto)" class="btn btn-success position-add" data-toggle="modal">
+                                        <i class="material-icons">&#xE147;</i> <span>SALVAR</span>
+                                    </a>
+                                    <br>
+                                    <hr class="line-hr">
+                                    <div class="clearfix"></div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
