@@ -12,7 +12,7 @@ Teste técnico em Angular/Node.js sobre *Aplicação de fluxo de aprovação par
     Visual Studio Code
     Angular Extensions link
 
-Algumas funcionalidades disponíveis na API
+🔧 Algumas funcionalidades disponíveis na API
 
     ✅ Solicitar um produto e registrar descrição e preço.    
     ✅ Aprovar ou reprovar uma solicitação.
@@ -23,19 +23,19 @@ Algumas funcionalidades disponíveis na API
     ✅ Inserir um novo produto e colocar imagem através do campo URL.
     ✅ Banco de dados MySQL para consultas.
 
-Você precisa ter Node.js / NPM instalado localmente.
+⚠️ Você precisa ter Node.js / NPM instalado localmente.
 Também será necessário ter o WorkBench/MySQL
 
 
-    Instale todas as dependências necessárias:
+   🛠️ Instale todas as dependências necessárias:
 
 npm install
 
-    Execute o projeto:
+   ▶️ Execute o projeto:
 
 ng serve
 
-Abra seu navegador e acesse http://localhost:7000 (porta do Angular).
+📂 Abra seu navegador e acesse http://localhost:7000 (porta do Angular).
 
 🎲 BANCO DE DADOS MySQL
 
