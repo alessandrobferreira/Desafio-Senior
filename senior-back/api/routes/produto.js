@@ -7,13 +7,13 @@ const mysql = require('../mysql').pool;
 router.get('/', (req, res, next) => {
   const html = `
     <div style="display: flex; justify-content: center; align-items: center; height: 96vh;">
-      <h1>AMBISIS</h1>
+      <h1>SENIOR</h1>
     </div>
   `;
   res.send(html);
 });
 
-// ROTA PARA CRIAR UMA NOVA EMPRESA
+// ROTA PARA CRIAR UM NOVO PRODUTO
 router.post('/insert', (req, res, next) => {
   mysql.getConnection((error, conn) => {
     if (error) {
@@ -70,7 +70,7 @@ router.post('/insert', (req, res, next) => {
   });
 });
 
-// ROTA PARA ATUALIZAR UM PRODUTO ESPECÍFICA
+// ROTA PARA ATUALIZAR UM PRODUTO ESPECÍFICO
 router.put('/update/:id', (req, res, next) => {
   mysql.getConnection((error, conn) => {
     if (error) {
@@ -114,7 +114,7 @@ router.put('/update/:id', (req, res, next) => {
   });
 });
 
-// ROTA PARA DELETAR UM PROTUDO ESPECÍFICA
+// ROTA PARA DELETAR UM PRODUTO ESPECÍFICO
 router.delete('/delete/:id', (req, res, next) => {
   mysql.getConnection((error, conn) => {
     if (error) {
@@ -151,7 +151,7 @@ router.delete('/delete/:id', (req, res, next) => {
           mensagem: 'Produto removido com sucesso!',
           request: {
             tipo: 'DELETE',
-            descricao: 'Remove uma produto',
+            descricao: 'Remove um produto',
             url: 'http://localhost:3000/produtos',
           },
         });
