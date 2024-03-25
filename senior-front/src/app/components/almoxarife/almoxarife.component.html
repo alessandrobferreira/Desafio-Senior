@@ -11,7 +11,7 @@
                         <h4 class="card-title">APROVAR PRODUTOS</h4>
                     </div>
                     <div *ngIf="statusVerificado && statusVerificado.length == 0">
-                        <h3 class="text-center">Não há produtos para ser verificado!</h3>
+                        <h3 class="text-center">Não há produtos para serem verificados!</h3>
                     </div>
                     <div *ngIf="produtos.produto && produtos.produto.length > 0">
                         <div *ngFor="let produto of produtos.produto; let i = index" >
