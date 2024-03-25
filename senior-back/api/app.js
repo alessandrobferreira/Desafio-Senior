@@ -53,7 +53,7 @@ app.use('/produtos', (req, res, next) => {
 
       if (resultado.length == 0) {
         return res.status(404).send({
-          mensagem: 'Não foi encontrado nenhuma empresa',
+          mensagem: 'Não foi encontrado nenhum produto',
         });
       }
 
@@ -72,7 +72,7 @@ app.use('/produtos', (req, res, next) => {
             viewAlmoxarife: produto.viewAlmoxarife,
             request: {
               tipo: 'GET',
-              descricao: 'Retorna os detalhes de cada empresa individualmente',
+              descricao: 'Retorna os detalhes de cada produto individualmente',
               url: 'http://localhost:3000/produto/' + produto.id,
             },
           };
