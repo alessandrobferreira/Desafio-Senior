@@ -46,7 +46,7 @@ a - Abra o Workbench e faça login no seu servidor MySQL.
 
 b - Clique no menu "Server" e selecione a opção "Data Import".
 
-c - Na tela de importação de dados, selecione a opção "Import from Self-Contained File" e selecione o arquivo do dump .sql que está na pasta raiz do projeto  que você deseja importar.
+c - Na tela de importação de dados, selecione a opção "Import from Self-Contained File" e selecione o arquivo do dump .sql que está na pasta "Senior-Back" do projeto.
 
 d - Em seguida, selecione a opção "Default Target Schema" ou escolha um banco de dados específico para importar o dump.
 
