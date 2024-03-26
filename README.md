@@ -4,7 +4,9 @@ Teste técnico em Angular/Node.js sobre *aplicação de fluxo de aprovação par
 **IMPORTANTE**
 
 🎥
-Tem um vídeo de demonstração no arquivo *cadastrando-produto.rar*, só abrir o arquivo e clicar em *view raw* que o arquvio compactado estará disponível para verificação.
+Nesse vídeo https://www.solucoesfullstack.com.br/alessandro-ferreira.mp4 está o fluxo completo.
+
+Tem também um pequeno vídeo de demonstração no arquivo *cadastrando-produto.rar*, só abrir o arquivo e clicar em *view raw* que o arquvio compactado estará disponível para verificação
 
 
 💻 Tecnologias
