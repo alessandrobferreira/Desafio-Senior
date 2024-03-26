@@ -1,5 +1,5 @@
 # Desafio-Senior
-Teste técnico em Angular/Node.js sobre *Aplicação de fluxo de aprovação para compra de material de escritório*.
+Teste técnico em Angular/Node.js sobre *aplicação de fluxo de aprovação para compra de material de escritório*.
 
 **IMPORTANTE**
 
