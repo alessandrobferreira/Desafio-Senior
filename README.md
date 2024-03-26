@@ -1,6 +1,12 @@
 # Desafio-Senior
 Teste técnico em Angular/Node.js sobre *Aplicação de fluxo de aprovação para compra de material de escritório*.
 
+**IMPORTANTE**
+
+🎥
+Tem um vídeo de demonstração no arquivo *cadastrando-produto.rar*, só abrir o arquivo e clicar em *view raw* que o arquvio compactado estará disponível para verificação.
+
+
 💻 Tecnologias
 
     NodeJs    
