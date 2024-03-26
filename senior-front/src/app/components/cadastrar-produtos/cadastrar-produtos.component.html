@@ -9,7 +9,7 @@
 
                     <figcaption class="st-prop">{{ nameProduto || '' }}</figcaption>
                     <p> {{descProduto || ''}} </p>
-                    <p class="price" *ngIf="valueProduto.length>1">  R$ {{ valueProduto || '' }} </p>
+                    <span *ngIf="valueProduto.length != 0" class="price">{{ valueProduto | currency:'BRL':'symbol':'1.2-2' }}</span>
                     </figure>
             </div>
         </div>

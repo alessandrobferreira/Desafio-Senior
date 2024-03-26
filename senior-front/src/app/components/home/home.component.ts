@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CadastrarProdutosService } from '../../services/cadastrar-produtos/cadastrar-produtos.service';
-import { first } from 'rxjs';
-import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -21,7 +19,7 @@ export class HomeComponent implements OnInit {
   clientes: any;
   copiaProdutos: any;
   copiAllData: any;
-  handleFind = false;
+  handleFind = true;
 
   ngOnInit(): void {
     this.getProdutos();
@@ -36,7 +34,7 @@ export class HomeComponent implements OnInit {
     if (this.fieldBusca.length > 0) {
       this.handleFind = true;
 
-      this.produtos = this.copiaProdutos.produto.filter(
+      this.produtos = this.copiaProdutos.filter(
         (produto: any) =>
           produto.situacao
             .toLowerCase()
@@ -47,17 +45,19 @@ export class HomeComponent implements OnInit {
             .includes(this.fieldBusca.toLowerCase()) ||
           produto.descricao
             .toLowerCase()
+            .includes(this.fieldBusca.toLowerCase()) ||
+          produto.observacao
+            .toLowerCase()
             .includes(this.fieldBusca.toLowerCase())
       );
-      console.log('RESULTADO RESULTADO: ', this.produtos);
     } else if (this.fieldBusca.length === 0) {
-      this.handleFind = false;
+      this.handleFind = true;
       this.produtos = this.copiAllData;
     }
   }
 
   clearBusca() {
-    this.handleFind = false;
+    this.handleFind = true;
     this.fieldBusca = '';
     this.produtos = this.copiAllData;
   }
@@ -72,22 +72,20 @@ export class HomeComponent implements OnInit {
           if (item.viewAlmoxarife === 1) {
             this.produtosNew.push(item);
           }
-          console.log('ALESSANDRO ', this.produtosNew);
         });
 
-        this.produtos = response;
-        this.copiAllData = response;
-        this.produtos.produto.forEach((item: any) => {
+        this.copiAllData = this.produtosNew;
+        this.produtos = this.produtosNew;
+        this.produtos.forEach((item: any) => {
           if (item.situacao === 0) {
-            item.situacao = 'Reprovado';
+            item.situacao = 'REPROVADO';
           } else if (item.situacao === 1) {
-            item.situacao = 'Aprovado';
+            item.situacao = 'APROVADO';
           }
         });
 
         this.copiaProdutos = this.produtos;
         // this.copiaProdutos = this.produtos.produto;
-        console.log(`A RESPOSTA DA REQUISIÇÃO GET É: `, this.produtos);
 
         // Swal.fire({
         //   title: 'Solicitação realizado com sucesso!',

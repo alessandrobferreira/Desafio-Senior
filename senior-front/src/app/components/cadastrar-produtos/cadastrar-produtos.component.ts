@@ -32,19 +32,16 @@ export class CadastrarProdutosComponent {
   }
 
   fieldFormat() {
-    const valueTrat = `${this.valueProduto.slice(
-      0,
-      -2
-    )},${this.valueProduto.slice(-2)}`;
-    this.valueProduto = valueTrat;
+    // console.log(' O VALOR DO PRODUTO É => ', this.valueProduto);
   }
 
   save() {
+    const valueProdutoString = this.valueProduto.toString();
     if (
       this.nameProduto.trim() == '' ||
       this.descProduto.trim() == '' ||
       this.urlImg.trim() == '' ||
-      this.valueProduto.trim() == ''
+      valueProdutoString.trim() == ''
     ) {
       Swal.fire({
         title: 'Os campos devem ser preenchidos!',

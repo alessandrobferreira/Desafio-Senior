@@ -39,9 +39,10 @@ export class CadastrarProdutosService {
     observacao: string
     // viewAlmoxarife: boolean
   ): Observable<any> {
-    console.log(
-      `CHEGOU NO SERVICE COM OS DADOS: nome: ${nome}, descricao: ${descricao}, urlImagem: ${urlImagem}, valor: ${valor}, situacao: ${situacao}, observacao: ${observacao}`
-    );
+    console
+      .log
+      // `CHEGOU NO SERVICE COM OS DADOS: nome: ${nome}, descricao: ${descricao}, urlImagem: ${urlImagem}, valor: ${valor}, situacao: ${situacao}, observacao: ${observacao}`
+      ();
 
     const body = {
       nome: nome,

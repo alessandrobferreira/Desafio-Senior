@@ -52,27 +52,32 @@ export class AlmoxarifeComponent {
   }
 
   save(param: any) {
-    console.log('OS DADOS DESTE PRODUTO É: ', param);
+    if (
+      this.nameProduto.trim() == '' ||
+      this.descProduto.trim() == '' ||
+      this.urlImg.trim() == '' ||
+      this.valueProduto.trim() == ''
+    ) {
+      Swal.fire({
+        title: 'Os campos devem ser preenchidos!',
+        text: 'Por favor, preencha todos os campos obrigatórios.',
+        icon: 'error',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK',
+      });
+      return;
+    }
 
-    // this.state
-    // this.observacao
-
-    // if (
-    //   this.nameProduto.trim() == '' ||
-    //   this.descProduto.trim() == '' ||
-    //   this.urlImg.trim() == '' ||
-    //   this.valueProduto.trim() == ''
-    // ) {
-    //   Swal.fire({
-    //     title: 'Os campos devem ser preenchidos!',
-    //     text: 'Por favor, preencha todos os campos obrigatórios.',
-    //     icon: 'error',
-    //     confirmButtonColor: '#3085d6',
-    //     confirmButtonText: 'OK',
-    //   });
-    //   return;
-    // }
-    console.log('O VALOR DA SITUAÇÃO É: ', this.valueSituacao);
+    if (this.valueSituacao === false && this.observacao === '') {
+      Swal.fire({
+        title: 'Aviso!',
+        text: 'Produtos Reprovados devem ter o campo Observação preenchidos Obrigatóriamente!.',
+        icon: 'error',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK',
+      });
+      return;
+    }
 
     this.cadastrarProdutosService
       .atualizarSolicitacao(
@@ -80,7 +85,7 @@ export class AlmoxarifeComponent {
         param.descricao,
         param.url,
         parseFloat(param.precoProduto),
-        this.valueSituacao,
+        (param.situacao = this.valueSituacao),
         param.id,
         this.observacao
       )
@@ -113,20 +118,7 @@ export class AlmoxarifeComponent {
             this.statusVerificado.push(item);
           }
         });
-
-        // Swal.fire({
-        //   title: 'Solicitação realizado com sucesso!',
-        //   text: 'Sua solicitação foi concluída com sucesso.',
-        //   icon: 'success',
-        //   confirmButtonColor: '#3085d6',
-        //   confirmButtonText: 'OK',
-        // });
       });
-  }
-
-  submit() {
-    // this.state
-    // this.observacao
   }
 
   aprovarProduto(param: any) {
@@ -137,20 +129,14 @@ export class AlmoxarifeComponent {
     console.log(param);
   }
 
-  onChangeState(param: any) {
-    console.log(param);
+  onChangeState(selectedOption: string) {
+    console.log(selectedOption);
 
-    this.valueSituacao = !this.valueSituacao;
-
-    console.log('O VALOR DA SITUAÇÃO É: ', this.valueSituacao);
-    // if (this.state === 'reprovar') {
-    //   this.showObserver = true;
-    //   this.valueSituacao = false;
-    // } else if (this.state === 'aprovar') {
-    //   this.showObserver = false;
-    //   this.valueSituacao = true;
-    //   // this.observacao = '';
-    // }
+    if (selectedOption === 'aprovar') {
+      this.valueSituacao = true;
+    } else if (selectedOption === 'reprovar') {
+      this.valueSituacao = false;
+    }
   }
 
   cancel() {

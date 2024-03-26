@@ -14,18 +14,18 @@
 
 	<div *ngIf="!handleFind" id="columns" class="columns_4 fadeIn first">
     	
-
-            <figure *ngFor="let produto of produtos.produto; let i = index">
-                <div *ngIf="produto.viewAlmoxarife === 1">
-                    <img [src]="produto.url">
-                    <figcaption>{{produto.nome}}</figcaption>
-                    <p>{{produto.descricao}}</p>
-                    <p style="color: red;" *ngIf="produto.situacao === 'Reprovado'">Reprovado</p>
-                    <p style="color: green;" *ngIf="produto.situacao === 'Aprovado'">Aprovado</p>
-                    <span class="price">{{ produto.precoProduto | currency:'BRL':'symbol':'1.2-2' }}</span>
-                </div>
-
-            </figure>
+            <ng-template *ngFor="let produto of produtos; let i = index">
+                <figure *ngIf="produto.viewAlmoxarife === 1">
+                    <div>
+                        <img [src]="produto.url">
+                        <figcaption>{{produto.nome}}</figcaption>
+                        <p>{{produto.descricao}}</p>
+                        <p style="color: red;" *ngIf="produto.situacao === 'Reprovado'">Reprovado</p>
+                        <p style="color: green;" *ngIf="produto.situacao === 'Aprovado'">Aprovado</p>
+                        <span class="price">{{ produto.precoProduto | currency:'BRL':'symbol':'1.2-2' }}</span>
+                    </div>
+                </figure>
+            </ng-template>
 
         
   
@@ -37,8 +37,9 @@
                 <img [src]="produto.url">
                 <figcaption>{{produto.nome}}</figcaption>
                 <p>{{produto.descricao}}</p>
-                <p style="color: red;" *ngIf="produto.situacao === 'Reprovado'">Reprovado</p>
-                <p style="color: green;" *ngIf="produto.situacao === 'Aprovado'">Aprovado</p>
+                <p>{{produto.observacao}}</p>
+                <p style="color: red;" *ngIf="produto.situacao === 'REPROVADO'">Reprovado</p>
+                <p style="color: green;" *ngIf="produto.situacao === 'APROVADO'">Aprovado</p>
                 <span class="price">{{ produto.precoProduto | currency:'BRL':'symbol':'1.2-2' }}</span>
             </figure>
 

@@ -11,7 +11,7 @@
                         <h4 class="card-title">APROVAR PRODUTOS</h4>
                     </div>
                     <div *ngIf="statusVerificado && statusVerificado.length == 0">
-                        <h3 class="text-center">Não há produtos para serem verificados!</h3>
+                        <h3 class="text-center">Não há produtos para ser verificado!</h3>
                     </div>
                     <div *ngIf="produtos.produto && produtos.produto.length > 0">
                         <div *ngFor="let produto of produtos.produto; let i = index" >
@@ -26,7 +26,8 @@
                                                 <img *ngIf="showImage" [src]="produto.url">
                                                 <figcaption class="st-prop">{{ produto.nome || '' }}</figcaption>
                                                 <p> {{produto.descricao || ''}} </p>
-                                                <p class="price" *ngIf="valueProduto.length>1">  R$ {{ produto.precoProduto || '' }} </p>
+                                                <!-- <p class="price" *ngIf="valueProduto.length>1">  R$ {{ produto.precoProduto || '' }} </p> -->
+                                                <span class="price">{{ produto.precoProduto | currency:'BRL':'symbol':'1.2-2' }}</span>
                                                 </figure>
                                         </div>
                                     </div>
@@ -58,10 +59,12 @@
                                     <div class="row">
                                         <div class="st-pr fadeIn second col-md-4">
                                             <label>Situação:</label>
-                                            <mat-select class="new-mat-select" placeholder="Selecione o estado"  (selectionChange)="onChangeState(produto)">
+                                            <mat-select class="new-mat-select" placeholder="Selecione o estado" (selectionChange)="onChangeState($event.value)">
                                                 <mat-option *ngFor="let opcao of opcoes" [value]="opcao.option">{{ opcao.option }}</mat-option>
                                             </mat-select>
                                         </div>
+                                        
+                                        
                                         <div class="st-pr col-md-4">
                                             <label>Observação:</label>
                                             <mat-form-field appearance="fill">
