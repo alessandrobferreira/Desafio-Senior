@@ -32,7 +32,7 @@ Tem também um pequeno vídeo de demonstração no arquivo *cadastrando-produto.
     ✅ Banco de dados MySQL para consultas.
 
 ⚠️ Você precisa ter Node.js / NPM instalado localmente.
-Também será necessário ter o WorkBench/MySQL
+Também será necessário ter o WorkBench/MySQL.
 
 
    🛠️ Instale todas as dependências necessárias:
